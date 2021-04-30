@@ -1,0 +1,24 @@
+Explicación de Diseño:
+
+Requerimiento 1:
+Para la Trama voy a usar Enum ya que es un dominio acotado y porque quiero validarlo de manera más facil que utilizar Strings.
+
+Requerimiento 2, 3 y 4:
+Voy a crear una clase "ConstructorDePrendas" y voy a tener un metodo "inicializarPrenda" que recibe como parametro el Tipo de Prenda. Por cada aspecto del material voy a crear su respectivo metodo para no armar un solo metodo para todos los aspectos ya que para la validación el metodo va a hacer enorme. Prefiero separar los metodos por aspecto y disminuir el tamaño.
+Para guardar un borrador de la prenda, la clase tiene los atributos de una prenda.
+
+Requerimiento 5:
+Por defecto, arrancan en Lisa. Si lo quieren cambiar, usaran el metodo correspondiente anteriormente mencionado.
+
+Requerimiento 6:
+Se tiene el metodo guardarPrenda la cual lo hace si ésta es valida, sino lanzara una exception.
+
+BONUS:
+Requerimiento 7:
+No lo supe hacer. Estimo que debería hacer otra clase que interactua con el "ConstructorDePrendas" y que tiene una lista como atributo de Uniformes Sugeridos.
+
+Requerimiento 8:
+Modelé una clase Uniforme la cual consta de 3 prendas: Superior, Inferior y Calzado. Sin una de ellas, rompe.
+
+Requerimiento 9:
+Estimo que el Admin va a interactuar con el Sistema (una clase, ¿quizás?) y que está interactue con el constructor de prendas y cree prenda por prenda, hasta poder instanciar un Uniforme. O utilizar un ConstructorDeUniformes, pero no se me ocurre como hacerlo...

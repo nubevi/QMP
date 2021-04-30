@@ -1,0 +1,18 @@
+Explicación de Diseño:
+
+Requerimiento 1:
+Consideré crear una Enumeración llamada TipoDePrenda para enumerar las distintas prendas y no permitir que escriban cualquier cosa. Estoy acotando el dominio de lo que se pueda escribir ahi, a contra posición de usar un tipo String, donde se me complicaría demasiado la validación del mismo. Tampoco le podría agregar comportamiento (con los Enums sí se puede).
+Una desventaja es que si el día de mañana aparece una nueva prenda, no lo puedo incluir en tiempo de ejecución, tengo que volver a compilar (igualmente, es algo innevitable, alguna vez lo voy a tener que hacer...).
+
+Requerimiento 2 y 3:
+A su vez, para los requerimiento de la Categoria y Material, también voy a hacerlo Enum por los mismos motivos que expresé anteriormente, solo que TipoDePrenda va a depender de la Categoría, y Prenda depende de Material.
+REVISAR SI ESTAN BIEN LAS RELACIONES.
+
+Requerimiento 4 y 5:
+En terminos de Cualidades de Diseño, es mejor usar una Clase "COLOR" que un String, porque puedo generar una abstracción del Dominio, además de poder agregarle comportamiento. Para el color secundario, voy a usar un Setter, porque considero que es un objeto mutable.
+
+Requerimiento 6:
+Para el TipoDePrenda, ColorPrimario y Material, voy a usar en el metodo constructor de Prenda 'requiereNonNull' para esos atributos.
+
+Requerimiento 7:
+Cuando instancio un tipo de prenda, su categoria esta hardcodeada.
